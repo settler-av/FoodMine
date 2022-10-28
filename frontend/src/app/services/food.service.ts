@@ -10,6 +10,11 @@ export class FoodService {
   constructor() { }
 
   getAll():Food[]{
+    console.log("getAll");
     return sample_foods
+  }
+
+  getAllFoodsBySearchTerm(searchTerm:string):Food[]{    
+    return sample_foods.filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 }
