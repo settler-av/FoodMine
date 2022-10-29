@@ -17,7 +17,7 @@ app.get("/api/foods/search/:searchTearm", (req, res)=>{
     const searchTerm = req.params.searchTearm;
     const foods = sample_foods
     .filter(food => food.name.toLowerCase()
-    .includes(searchTerm.toLowerCase());
+    .includes(searchTerm.toLowerCase()));
     res.send(foods);
 })
 
@@ -26,6 +26,7 @@ app.get("/api/foods/tags", (req,res)=>{
 });
 
 app.get("/api/foods/tag/:tagName", (req,res) => {
+    console.log("tag name: " + req.params.tagName);
     const tagName = req.params.tagName;
     const foods = sample_foods
     .filter(food => food.tags?.includes(tagName));
@@ -40,7 +41,7 @@ app.get("/api/foods/:foodId", (req, res)=>{
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, ()=>{
     console.log(`Listening on port http://localhost:${port}`);
