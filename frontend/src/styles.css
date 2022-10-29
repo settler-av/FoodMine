@@ -1,16 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=QuickSand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html{
-    font-size: 16px;
+  font-size:16px;
 }
-html, button{
-    font-family: 'QuickSand', sans-serif;
+
+html,
+button{
+  font-family: "Quicksand", "sans-serif";
 }
+
+body{
+  margin: 0;
+}
+
 a{
-    text-decoration: none;
-    /* color: #af1313; */
+  text-decoration: none;
 }
